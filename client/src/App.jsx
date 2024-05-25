@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-const socket = io("http://localhost:4000");
+const socket = io("https://challenge-react-chat-server.vercel.app/");
 
 function App() {
   const [nickname, setNickname] = useState("");
@@ -16,7 +16,7 @@ function App() {
   const [typingUser, setTypingUser] = useState("");
   const [isCurrentUserTyping, setIsCurrentUserTyping] = useState(false);
   const chatRef = useRef(null);
-  const url = "http://localhost:4000/api/";
+  const url = "https://challenge-react-chat-server.vercel.app/api/";
 
   useEffect(() => {
     const receivedMessage = (message) => {
