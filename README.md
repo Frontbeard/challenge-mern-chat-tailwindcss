@@ -23,4 +23,4 @@ Create a React chat:
 
 Developer: Frontbeard (Lucas Benitez)
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W07CHazGTds?si=n276wHDvs8cm-HmG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+[![Frontbeard](https://www.youtube.com/watch?v=W07CHazGTds)](https://www.youtube.com/watch?v=W07CHazGTds)
