@@ -25,4 +25,4 @@ Developer: Frontbeard (Lucas Benitez)
 
 Demo: https://youtu.be/W07CHazGTds
 
-[![](https://markdown-videos.deta.dev/youtube/NarBox1LkYc)](https://youtu.be/NarBox1LkYc)
+[![Alt text](https://img.youtube.com/vi/W07CHazGTds/0.jpg)](https://www.youtube.com/watch?v=W07CHazGTds)
