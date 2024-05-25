@@ -3,7 +3,7 @@ import io from "socket.io-client";
 import { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-const socket = io("http://localhost:4000");
+const socket = io(window.location.origin); // Conexión al mismo dominio que la aplicación
 
 function App() {
   const [nickname, setNickname] = useState("");
@@ -16,7 +16,7 @@ function App() {
   const [typingUser, setTypingUser] = useState("");
   const [isCurrentUserTyping, setIsCurrentUserTyping] = useState(false);
   const chatRef = useRef(null);
-  const url = "http://localhost:4000/api/";
+  const url = `${window.location.origin}/api/`; // URL de la API en el mismo dominio que la aplicación
 
   useEffect(() => {
     const receivedMessage = (message) => {
@@ -36,7 +36,7 @@ function App() {
   }, [messages]);
 
   if (!firstTime) {
-    axios.get(url + "messages").then((res) => {
+    axios.get(`${url}messages`).then((res) => {
       setStoredMessages(res.data.messages);
     });
     setFirstTime(true);
@@ -81,7 +81,7 @@ function App() {
       setIsTyping(false);
       setIsCurrentUserTyping(false);
 
-      axios.post(url + "save", {
+      axios.post(`${url}save`, {
         message: message,
         from: nickname,
       });
