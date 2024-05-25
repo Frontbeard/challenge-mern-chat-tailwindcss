@@ -23,4 +23,4 @@ Create a React chat:
 
 Developer: Frontbeard (Lucas Benitez)
 
-[![challenge-react-chat](https://www.youtube.com/watch?v=W07CHazGTds)](https://www.youtube.com/watch?v=W07CHazGTds)
+[![](https://markdown-videos.deta.dev/youtube/W07CHazGTds)](https://youtu.be/W07CHazGTds)
