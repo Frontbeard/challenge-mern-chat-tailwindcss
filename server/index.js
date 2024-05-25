@@ -27,6 +27,23 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use("/api", router);
 
+io.on("connection", (socket) => {
+  console.log(socket.id);
+  console.log("Cliente conectado");
+
+  socket.on("message", (message, nickname) => {
+    socket.broadcast.emit("message", {
+      body: message,
+      from: nickname,
+    });
+  });
+
+  socket.on("typing", (data) => {
+    const { isTyping, user } = data;
+    socket.broadcast.emit("typing", { isTyping, user });
+  });
+});
+
 mongoose
   .connect(url)
   .then(() => {
