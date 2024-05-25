@@ -20,7 +20,7 @@ app.use("/api", router);
 const PORT = process.env.PORT || 4000;
 
 const server = app.listen(PORT, () => {
-  console.log(`Servidor ejecutándose en http://localhost:${PORT}`);
+  console.info(`Servidor ejecutándose en http://localhost:${PORT}`);
 });
 
 const io = new Socketserver(server, {
@@ -30,8 +30,9 @@ const io = new Socketserver(server, {
 });
 
 io.on("connection", (socket) => {
-  console.log(socket.id);
-  console.log("Cliente conectado");
+  console.error("hola")
+  console.info(socket.id);
+  console.info("Cliente conectado");
 
   socket.on("message", (message, nickname) => {
     socket.broadcast.emit("message", {
@@ -49,7 +50,7 @@ io.on("connection", (socket) => {
 mongoose
   .connect(url)
   .then(() => {
-    console.log("Conectado con éxito a la base de datos");
+    console.info("Conectado con éxito a la base de datos");
   })
   .catch((error) => {
     console.error("Error conectando a la base de datos:", error);
